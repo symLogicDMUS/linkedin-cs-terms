@@ -1,9 +1,14 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from "@emotion/react";
 
 export default function TabPanel(props) {
     const { children, value, index, ...other } = props;
+
+    const theme = useTheme();
+
+    const lg = useMediaQuery(theme.breakpoints.up("lg"));
 
     return (
         <div
@@ -14,9 +19,7 @@ export default function TabPanel(props) {
             {...other}
         >
             {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
-                </Box>
+                <Box sx={{ p: lg ? 3 : 0, pt: 3 }}>{children}</Box>
             )}
         </div>
     );

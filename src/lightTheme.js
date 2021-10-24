@@ -1,10 +1,10 @@
-import {lighten} from "@mui/material";
+import { lighten } from "@mui/material";
 
 const lightTheme = {
     palette: {
         mode: "light",
         primary: {
-            main: '#0a66c2',
+            main: "#0a66c2",
         },
         secondary: {
             main: "#FF9900",
@@ -12,8 +12,8 @@ const lightTheme = {
             dark: "#c66a00",
         },
         background: {
-            default: lighten('#0a66c2', 0.9)
-        }
+            default: lighten("#0a66c2", 0.9),
+        },
     },
 };
 
